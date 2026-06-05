@@ -5,11 +5,17 @@ credentials.json
 secrets.json
 
 # Raw data - too large and may include licensed/scraped content
-data/raw/
-data/processed/
+data/raw/*
+data/processed/*
 
-# Allow specific outputs we DO want committed
+# Allow specific small files we DO want committed
+!data/raw/README.md
+!data/processed/README.md
 !data/processed/sample_postings.csv
+!data/processed/model_results_real.csv
+!data/processed/model_results_predicted.csv
+!data/processed/feature_importance_real.csv
+!data/processed/feature_importance_predicted.csv
 
 # Python
 __pycache__/
