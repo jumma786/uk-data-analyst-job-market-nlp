@@ -1,0 +1,46 @@
+# Secrets - NEVER commit these
+.env
+*.key
+credentials.json
+secrets.json
+
+# Raw data - too large and may include licensed/scraped content
+data/raw/
+data/processed/
+
+# Allow specific outputs we DO want committed
+!data/processed/sample_postings.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Model files - large, regeneratable
+*.pkl
+*.joblib
+*.h5
+*.model
+
+# Logs
+*.log
+logs/
