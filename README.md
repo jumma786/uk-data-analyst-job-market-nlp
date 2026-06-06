@@ -15,12 +15,13 @@ is itself part of the project.
 
 ## Interactive Dashboard
 
-[![UK data job market role archetypes — interactive dashboard](docs/dashboard_thumbnail.png)](docs/role_archetypes_dashboard.html)
+**▶ [View the live dashboard](https://jumma786.github.io/uk-data-analyst-job-market-nlp/role_archetypes_dashboard.html)**
+
+[![UK data job market role archetypes — interactive dashboard](docs/dashboard_thumbnail.png)](https://jumma786.github.io/uk-data-analyst-job-market-nlp/role_archetypes_dashboard.html)
 
 An interactive view of the 17 role archetypes, the salary hierarchy, and the UMAP
-role landscape is in [`docs/role_archetypes_dashboard.html`](docs/role_archetypes_dashboard.html)
-— a single self-contained file (open it locally, or
-[serve `docs/` via GitHub Pages](https://docs.github.com/en/pages) to get a live link).
+role landscape — click the image above or the link, or open the self-contained
+[`docs/role_archetypes_dashboard.html`](docs/role_archetypes_dashboard.html) locally.
 
 ---
 
