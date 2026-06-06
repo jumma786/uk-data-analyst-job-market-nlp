@@ -212,6 +212,41 @@ The Adzuna API returns live data, so your collection results will not match this
 
 ---
 
+## Adapting This to Your Own Market
+
+The pipeline isn't UK- or data-role-specific — it's a reusable template for clustering and
+salary-modelling any job market from job-posting text. Here's what to change for your own version.
+
+**1. Pick a different country.** Adzuna exposes the same API for many countries via the country
+code in the endpoint. In `01_data_collection.ipynb`, change the `gb` in
+`https://api.adzuna.com/v1/api/jobs/gb/search/{page}` to `us`, `de`, `fr`, `au`, `ca`, etc. Salary
+figures will come back in local currency — update the £ labels in the notebooks and docs accordingly.
+
+**2. Change the role family.** Swap the five search keywords in `01_data_collection.ipynb` for your
+target roles (e.g. `["registered nurse", "nurse practitioner", ...]` for healthcare, or
+`["frontend developer", "react developer", ...]` for software). Everything downstream — clustering,
+salary modelling, SHAP — is keyword-agnostic.
+
+**3. Re-tune the junk filter.** `src/junk_filter.py` encodes UK-data-specific noise (course-advert
+recruiters, "Fire Engineer" false positives). Inspect your own top companies and category labels in
+`02_data_exploration.ipynb`, then update the recruiter names and category rules for your market.
+
+**4. Adjust clustering granularity to your dataset size.** HDBSCAN's `min_cluster_size` /
+`min_samples` in `03_embeddings_and_clustering.ipynb` are tuned for ~2,800 postings. Smaller datasets
+need smaller values; larger ones can go higher. Expect to iterate — the notebook documents three
+iterations as a worked example.
+
+**5. The salary model needs no changes.** `04_salary_modelling.ipynb` works on any market with salary
+data: the leak-free pipeline, the real-vs-predicted split, and the SHAP analysis are all generic.
+
+**6. Regenerate the dashboard.** The dashboard data is produced from `postings_clustered.parquet`; the
+extraction + build steps are scripted, so re-running them on your data refreshes the charts.
+
+> **Reality check.** This is a single-day snapshot of one market. For a more authoritative version,
+> collect on several dates and compare drift — the code reproduces, so a repeat run is cheap.
+
+---
+
 ## Tech Stack
 
 - **Data collection**: requests, python-dotenv, Adzuna UK Jobs API
