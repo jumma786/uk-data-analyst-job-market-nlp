@@ -100,8 +100,8 @@ def is_junk(row):
 | Unique companies | 1,412 |
 | Unique titles | 1,658 |
 | Categories represented | 25 |
-| Postings with employer-posted salary | 1,355 (47.8%) |
-| Postings with Adzuna-predicted salary | 1,480 (52.2%) |
+| Postings with employer-posted salary | 1,012 (35.7%) |
+| Postings with Adzuna-predicted salary | 1,823 (64.3%) |
 | Date range | All collected in single window, 03 June 2026 |
 
 Output file: `data/processed/postings_clean.parquet` (820 KB)
@@ -110,5 +110,5 @@ Output file: `data/processed/postings_clean.parquet` (820 KB)
 
 1. **Single-day snapshot.** The dataset reflects UK Adzuna's active listings on one date. Seasonal or weekly variation is not captured.
 2. **Truncated descriptions.** Analysis works on ~75-word snippets, not full posts.
-3. **Salary mix.** ~52% of salary values are Adzuna predictions, not employer-posted. Analysis distinguishes between these.
+3. **Salary mix.** ~64% of salary values are Adzuna predictions, not employer-posted. Analysis distinguishes between these.
 4. **Recruiter aggregator bias.** ~10% of postings come from data-specialist recruiter Harnham, who aggregate roles across many employers. These were retained as legitimate but represent recruiter coverage, not raw employer demand.

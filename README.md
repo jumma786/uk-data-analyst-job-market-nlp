@@ -13,14 +13,25 @@ is itself part of the project.
 
 ---
 
+## Interactive Dashboard
+
+[![UK data job market role archetypes — interactive dashboard](docs/dashboard_thumbnail.png)](docs/role_archetypes_dashboard.html)
+
+An interactive view of the 17 role archetypes, the salary hierarchy, and the UMAP
+role landscape is in [`docs/role_archetypes_dashboard.html`](docs/role_archetypes_dashboard.html)
+— a single self-contained file (open it locally, or
+[serve `docs/` via GitHub Pages](https://docs.github.com/en/pages) to get a live link).
+
+---
+
 ## Headline Findings
 
 1. **AI/ML Engineer is the highest-paid archetype in the UK data market** — median £74,416. £14K above mid-level Data Scientist. The "AI premium" is real and quantifiable.
 2. **"Senior Data Scientist" does not pay more than mid-level Data Scientist** — £59,723 vs £60,000. The "Senior" tag is salary-neutral within this role. Salary jumps happen at the Lead/Principal transition (£65K), not at "Senior".
 3. **Analytics Engineer (£61,822) outpays Data Scientist (£60,000)** — contradicts the popular narrative about data science being the highest-paying data career.
 4. **The £45K plateau marks the non-specialist analyst floor** — generic "Data Analyst" and "Business Data Analyst" cluster at exactly £45K.
-5. **Real (employer-posted) salaries are *more* predictable than Adzuna's own predictions** — XGBoost achieves R² 0.512 on real salaries versus 0.368 on Adzuna's predictions. Our features capture more of the real-salary signal than they do of Adzuna's model.
-6. **Adzuna's prediction model appears to underweight UK location** — London is the #2 feature for real salaries (4.6% importance) but does not appear in the top 20 features of the model predicting Adzuna's predictions.
+5. **Real (employer-posted) salaries are *more* predictable than Adzuna's own predictions** — XGBoost achieves R² 0.503 on real salaries versus 0.377 on Adzuna's predictions (leak-free 5-fold CV). Our features capture more of the real-salary signal than they do of Adzuna's model.
+6. **Adzuna's prediction model appears to underweight UK location** — London is the #2 feature for real salaries (3.9% importance) but falls to #39 in the model predicting Adzuna's predictions.
 
 Full discussion in `docs/role_archetype_findings.md` and `docs/phase5_salary_modelling_findings.md`.
 
@@ -100,7 +111,7 @@ Two regression models trained side by side:
 - **Real (employer-posted) salaries**: 1,001 postings, target = salary_midpoint
 - **Adzuna predicted salaries**: 1,823 postings, target = salary_midpoint
 
-Features: 267 columns across three groups:
+Features: up to 267 columns across three groups (the exact count varies by target because preprocessing is now fit per-fold on each target's own rows — 237 for the real-salary model, 266 for the predicted-salary model):
 
 - 62 categorical (cluster, region, category, contract type, contract time) — one-hot encoded
 - 200 text features — TF-IDF on title text, 1-2 word n-grams, min_df=5
@@ -111,13 +122,21 @@ Four models compared with 5-fold cross-validation:
 | Model | Real R² | Real MAE | Adzuna R² | Adzuna MAE |
 |---|---:|---:|---:|---:|
 | Baseline (predict mean) | -0.011 | £28,280 | -0.008 | £13,039 |
-| Ridge Regression | 0.459 | £19,502 | 0.357 | £10,044 |
-| Random Forest | 0.495 | £17,123 | 0.354 | £10,018 |
-| **XGBoost** | **0.512** | **£16,925** | **0.368** | **£9,730** |
+| Ridge Regression | 0.421 | £20,078 | 0.365 | £9,972 |
+| Random Forest | 0.481 | £17,352 | 0.357 | £9,969 |
+| **XGBoost** | **0.503** | **£16,752** | **0.377** | **£9,608** |
 
-XGBoost won both targets, but only marginally. Random Forest barely beats Ridge, indicating most of the salary signal is linear.
+All preprocessing (TF-IDF, one-hot, scaling) is fit inside each CV fold via a scikit-learn `Pipeline`, so the figures above carry no train/test leakage. XGBoost won both targets. On Adzuna's predictions the signal is essentially linear (Ridge ≈ Random Forest); on real salaries the tree models add ~8 R² points over Ridge.
 
-The XGBoost real-salary MAE of £16,925 is appropriate for understanding salary drivers, not for individual career advice. Anyone considering a £60K role would want predictions accurate to £2-3K, not £17K. The model is honest about what it can and cannot tell you.
+The XGBoost real-salary MAE of £16,752 is appropriate for understanding salary drivers, not for individual career advice. Anyone considering a £60K role would want predictions accurate to £2-3K, not £17K. The model is honest about what it can and cannot tell you.
+
+### What drives a real salary? (SHAP)
+
+A SHAP analysis attributes each prediction back to its features in pounds. Location is the single largest driver — being in London swings a prediction by ~£9K on average — followed by contractor status and the seniority flag, while the generic word "analyst" pulls predictions *down*. This is the £-denominated, directional confirmation that **location dominates real UK data salaries**, the very signal Adzuna's own prediction model appears to underweight.
+
+[![SHAP — drivers of real UK data salary](docs/shap_summary_real.png)](docs/phase5_salary_modelling_findings.md#9-shap-location-is-the-single-largest--driver-of-real-salary)
+
+A log-salary target was also tested; it lowers MAE modestly (most for the linear model) without changing the story. Full detail in [`docs/phase5_salary_modelling_findings.md`](docs/phase5_salary_modelling_findings.md).
 
 ---
 
@@ -140,10 +159,16 @@ UK-Job-Postings-NLP/
 ├── docs/
 │   ├── data_quality_audit.md          # Audit narrative + truncation finding
 │   ├── role_archetype_findings.md     # 17 archetypes + salary hierarchy
-│   ├── phase5_salary_modelling_findings.md  # Model comparison + feature importance
+│   ├── phase5_salary_modelling_findings.md  # Model comparison, SHAP, log-target
+│   ├── role_archetypes_dashboard.html # Interactive dashboard (self-contained)
+│   ├── dashboard_thumbnail.png        # README hero image
+│   ├── shap_summary_real.png          # SHAP beeswarm — salary drivers
+│   ├── shap_bar_real.png              # SHAP mean |impact| bar
 │   ├── clusters_named.png             # UMAP scatter of role archetypes
 │   └── umap_by_category.png           # UMAP scatter by Adzuna category
-└── src/                                # (reserved for future utility modules)
+└── src/                                # Reusable utilities imported by the notebooks
+    ├── features.py                     # region / title feature engineering, salary outliers
+    └── junk_filter.py                  # is_junk() course-advert + false-positive filter
 ```
 
 ---
@@ -204,11 +229,11 @@ This project is honest about what it can and cannot show:
 
 1. **Truncated descriptions.** Analysis works on 75-word opener snippets. Skill extraction was dropped because it requires full text.
 2. **Single-day snapshot.** Data was collected on 03 June 2026. Seasonal/monthly variation not captured.
-3. **Salary mix.** 52% of salary values are Adzuna predictions; the analysis explicitly distinguishes between these and employer-posted figures.
+3. **Salary mix.** 64% of salary values are Adzuna predictions (1,823 of 2,835) and 36% are employer-posted (1,012); the analysis explicitly distinguishes between these and employer-posted figures.
 4. **MAE of £17K** on the real-salary model means predictions are useful for analytical insight, not individual career advice.
 5. **17 clusters are unsupervised.** They were not validated against an authoritative role taxonomy. Some clusters are catch-alls (notably "Domain-specific Finance/Consulting" at 463 postings).
 6. **UK-only.** Findings cannot be generalised beyond the UK market.
-7. **Feature importance from XGBoost is noisy** with 267 features. Importance rankings should be read directionally rather than precisely.
+7. **Feature importance from XGBoost is noisy** with ~240–270 features. Importance rankings should be read directionally rather than precisely.
 
 ---
 

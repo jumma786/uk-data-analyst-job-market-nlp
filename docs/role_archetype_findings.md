@@ -95,7 +95,7 @@ The Power BI / Microsoft stack archetype (£59,310) pays £1,800 less than Data 
 
 2. **Title-only embedding loses context.** Identical titles for different companies may represent different actual roles. Including descriptions would have helped but the description truncation made this less effective.
 
-3. **Salary mix.** 52% of salary values are Adzuna predictions rather than employer-posted. While Adzuna's predictions appear to track real salaries closely in aggregate (real mean £56,380 vs predicted mean £57,718), individual cluster medians may be biased.
+3. **Salary mix.** 64% of salary values are Adzuna predictions rather than employer-posted (1,823 vs 1,012). Adzuna's predictions do **not** track real salaries closely in aggregate: employer-posted salaries run materially higher (real median £60,000 vs predicted median £56,751; real mean £69,587 vs predicted mean £58,379). Postings where employers publish a real salary skew toward higher-paying and more senior roles, and/or Adzuna under-predicts. Because the cluster medians in the table above blend both salary types, clusters with a higher share of employer-posted salaries may read higher than a like-for-like comparison would.
 
 4. **Carrier-of-talent confounding.** Several clusters are dominated by single recruiters (e.g., Harnham aggregates many data roles). The salary medians reflect the postings as listed, not necessarily what employers ultimately pay.
 

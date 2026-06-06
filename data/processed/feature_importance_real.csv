@@ -1,268 +1,238 @@
 feature,importance
-title_has_senior,0.056898654
-region_grouped_London,0.0455967
-contract_time_unknown,0.03232666
-title_has_junior,0.03160348
-software,0.027632406
-power,0.027460467
-staff,0.026568003
-category_label_Scientific & QA Jobs,0.025703268
-contract_type_contract,0.025077078
-analyst,0.020422656
-12,0.019444928
-head,0.01935503
-data architect,0.01910353
-management,0.017770352
-remote,0.016228925
-business,0.01618672
-data science,0.015059711
-manager,0.014510245
-sc,0.013707747
-developer,0.013540388
-cluster_str_8,0.013480675
-cluster_str_1,0.01325722
-n_keywords_matched,0.013097428
-category_label_IT Jobs,0.011560972
-scientist,0.010541417
-engineer,0.010440501
-data analytics,0.010346327
-cluster_str_0,0.010221441
-hr,0.008871229
-intelligence,0.008759691
-crime,0.008660184
-cluster_str_15,0.00827013
-senior,0.0075347857
-data scientist,0.0070844716
-category_label_Admin Jobs,0.0069401455
-business analyst,0.006935969
-engineering,0.0069138645
-region_grouped_Northern Ireland,0.0068336427
-analytics,0.0066671297
-cluster_str_14,0.00666678
-platform,0.006578549
-data,0.006444862
-technical,0.0064432262
-ftc,0.006434466
-cluster_str_13,0.0063742828
-learning,0.006200897
-category_label_Trade & Construction Jobs,0.0061926222
-region_grouped_Wales,0.005944738
-ai,0.005865502
-data analyst,0.005599183
-region_grouped_West Midlands,0.0051423255
-senior analytics,0.0051211216
-customer,0.0050452417
-power bi,0.004958773
-specialist,0.0049529923
-bi developer,0.004870027
-london,0.0047192657
-architect,0.004666929
-contract_time_full_time,0.0044706613
-financial,0.004410465
-category_label_Accounting & Finance Jobs,0.0042767343
-contract,0.0042474754
-region_grouped_South West England,0.004197715
-category_label_Healthcare & Nursing Jobs,0.004133317
-investment,0.004056787
-category_label_Engineering Jobs,0.0040137162
-cleared,0.0039906027
-product,0.0039852303
-bi,0.0038139436
-consultant,0.0037163259
-senior data,0.003618181
-research,0.003579144
-cluster_str_2,0.0035075066
-cluster_str_9,0.0033970608
-month,0.0033922137
-reporting,0.0033318985
-lead,0.0032893186
-intern,0.003277297
-level,0.0032228983
-applied,0.0032003573
-contract_type_permanent,0.0031942818
-title_word_count,0.0031662523
-region_grouped_Yorkshire And The Humber,0.0030983272
-region_grouped_UK,0.0029436054
-consulting,0.002926048
-finance,0.002877622
-azure,0.0028763441
-solutions,0.002875221
-finance data,0.0028016684
-sql,0.0027587782
-asset,0.0027310443
-pricing,0.00271658
-systems,0.002688777
-analytics manager,0.00266028
-science engineer,0.002540209
-cluster_str_3,0.002525706
-administrator,0.0024013289
-support,0.0023689717
-ml,0.002311125
-intelligence developer,0.0022985018
-region_grouped_South East England,0.0022787836
-cluster_str_10,0.0021861035
-category_label_Social work Jobs,0.0021356805
-analytics engineer,0.0021180564
-intelligence analyst,0.0020936846
-stack,0.0020801388
-hr data,0.001963603
-bi specialist,0.00196036
-security,0.0019417532
-contract_type_unknown,0.0018437791
-mi,0.0018393272
-region_grouped_North West England,0.0017721868
-analytics engineering,0.001769289
-sc cleared,0.001766979
-business intelligence,0.0017605913
-bi analyst,0.0017591346
-cluster_str_6,0.001746646
-senior analyst,0.0017288494
-cluster_str_4,0.001710475
-data engineer,0.0016822184
-marketing,0.0016429733
-fp,0.0016191747
-region_grouped_East Midlands,0.00161198
-recruitment,0.001592954
-principal,0.001555235
-insight,0.0015368488
-python,0.0014855282
-cluster_str_-1,0.0014606271
-category_label_Consultancy Jobs,0.0014536781
-platform engineer,0.0014299694
-scientist ai,0.0013485242
-experience,0.0013172358
-powerbi,0.0013018702
-global,0.0012892487
-systems analyst,0.0012809436
-category_label_Logistics & Warehouse Jobs,0.0012080441
-data insights,0.0012047288
-region_grouped_Scotland,0.001197285
-contract_time_part_time,0.0011858345
-lead data,0.0011828147
-cluster_str_16,0.0011655289
-performance analyst,0.001100406
-cluster_str_12,0.0010874848
-region_grouped_Eastern England,0.0010509989
-analyst data,0.0010325481
-people,0.0010007129
-cluster_str_5,0.0009951746
-reporting analyst,0.0009933226
-cluster_str_7,0.0009813912
-technology,0.00097123574
-governance,0.0009673291
-director,0.00096313853
-science,0.0009189924
-staff data,0.0008383346
-region_grouped_North East England,0.00078154897
-data reporting,0.0007394141
-junior,0.00073651
-development,0.00065131654
-digital,0.0006484188
-applied data,0.0006409336
-uk,0.0006324858
-apprentice,0.00062402606
-science manager,0.00062339933
-principal data,0.0005806362
-cluster_str_11,0.00057668186
-advanced,0.00052525353
-quality,0.000516082
-commercial,0.00049079774
-product manager,0.00048309806
-lead analytics,0.0004772317
-category_label_Teaching Jobs,0.0004591503
-assistant,0.00044203122
-category_label_Manufacturing Jobs,0.00043769475
-chain,0.000436267
-operations,0.00042827896
-process,0.0004137347
-start,0.00040726297
-data insight,0.0003534515
-graduate,3.7907164e-05
-analyst sql,1.1435027e-05
-12 month,9.746175e-06
-category_label_Maintenance Jobs,0.0
-"category_label_PR, Advertising & Marketing Jobs",0.0
-sales,0.0
-risk,0.0
-researcher,0.0
-category_label_Part time Jobs,0.0
-ey gds,0.0
-category_label_Creative & Design Jobs,0.0
-scientist machine,0.0
-sector,0.0
-description_length,0.0
-vice president,0.0
-vice,0.0
-term,0.0
-team,0.0
-supply chain,0.0
-supply,0.0
-strategy,0.0
-strategic,0.0
-stock,0.0
-sr,0.0
-category_label_Retail Jobs,0.0
-software engineer,0.0
-category_label_Customer Services Jobs,0.0
-services,0.0
-senior software,0.0
-"category_label_Energy, Oil & Gas Jobs",0.0
-category_label_Graduate Jobs,0.0
-category_label_HR & Recruitment Jobs,0.0
-category_label_Hospitality & Catering Jobs,0.0
+12,0.08573473
+region_grouped_London,0.03944942
+contract_time_unknown,0.038975738
+title_has_senior,0.034715224
+cleared,0.027924899
+martech,0.026190065
+analyst month,0.025628561
+title_has_junior,0.023993094
+scientist,0.023970084
+month,0.02302618
+analyst,0.021165054
+contract_type_contract,0.017737927
+data engineer,0.017515903
+head,0.016742917
+software,0.015017981
+automation,0.014952029
+remote,0.01441163
+data analytics,0.014107742
+category_label_Scientific & QA Jobs,0.012913762
+staff,0.011878988
+business analyst,0.011213247
+category_label_IT Jobs,0.011106603
+management,0.009930487
+data science,0.009782025
+specialist,0.009580034
+sc,0.009428229
+cluster_str_15,0.009418761
+bi developer,0.008962851
+ftc,0.008954387
+bi,0.008247232
+data governance,0.008226999
+manager,0.008186185
+cluster_str_0,0.008179167
+cluster_str_1,0.008010169
+data analyst,0.007866268
+engineering,0.0077277017
+engineer,0.007646309
+n_keywords_matched,0.007602185
+analytics,0.00729832
+cluster_str_8,0.0069835293
+hr,0.0069131497
+architect,0.006766788
+category_label_Accounting & Finance Jobs,0.0064525874
+region_grouped_Wales,0.0060985317
+category_label_Trade & Construction Jobs,0.0060352786
+technical,0.00601229
+cluster_str_14,0.006011611
+region_grouped_Northern Ireland,0.0060036466
+region_grouped_West Midlands,0.005937507
+cluster_str_6,0.0058534807
+data scientist,0.0056652115
+region_grouped_South West England,0.005596529
+power bi,0.005578216
+category_label_Admin Jobs,0.00527129
+financial,0.005071903
+ai,0.005024735
+cluster_str_2,0.0048732418
+cluster_str_13,0.004809151
+platform,0.0046879034
+category_label_Consultancy Jobs,0.0046766717
+category_label_Healthcare & Nursing Jobs,0.004543333
+technical business,0.0044884994
+data,0.004480741
+senior,0.004442624
+intelligence,0.0043420894
+cluster_str_9,0.004214343
+power,0.003948791
+developer,0.0038675484
+learning,0.0036256441
+research,0.0034264214
+category_label_Engineering Jobs,0.0033710967
+title_word_count,0.0033475994
+sc cleared,0.0033440338
+product,0.0033408762
+business,0.00320834
+cluster_str_10,0.0030359342
+administrator,0.003016895
+asset,0.0029865848
+ml,0.0029608207
+consultant,0.0028602583
+cluster_str_12,0.0027672476
+level,0.0027187706
+contract,0.0027104844
+region_grouped_UK,0.0026250584
+contract_type_permanent,0.0025781556
+contract_time_full_time,0.0025756077
+coordinator,0.0024072202
+insight,0.0023777448
+category_label_Social work Jobs,0.0023562706
+azure,0.0023535315
+analytics engineer,0.0022399144
+senior stack,0.0022355658
+sql,0.0022211475
+customer,0.002188057
+credit,0.0021602148
+finance,0.0021205174
+analytics manager,0.0020813814
+systems,0.002078392
+senior analytics,0.0020715916
+finance business,0.0020675217
+cluster_str_-1,0.00195362
+region_grouped_Yorkshire And The Humber,0.0019375461
+senior analyst,0.0019371503
+support,0.0019241516
+lead,0.0019196848
+product manager,0.0019121263
+senior data,0.0019010266
+trainer,0.0017664443
+analyst data,0.0017287552
+cluster_str_5,0.0017032365
+region_grouped_South East England,0.0017016452
+fabric,0.0016953833
+health,0.0015861704
+region_grouped_East Midlands,0.0015793886
+reporting,0.0015363178
+powerbi,0.0015234288
+contract_type_unknown,0.0015213143
+cluster_str_7,0.0015209574
+pricing,0.0014821512
+performance analyst,0.0014630258
+bi analyst,0.0014625987
+principal,0.0014585664
+category_label_Logistics & Warehouse Jobs,0.0014470585
+data insights,0.0014370177
+senior bi,0.0014229558
+estimator,0.0014212746
+insights,0.0014184574
+region_grouped_North West England,0.001383943
+finance data,0.0013814776
+python,0.0013795189
+programme,0.0013486613
+insight analyst,0.0013156336
+fp,0.0013044175
+stack,0.0012768564
+apprentice,0.0012551735
+region_grouped_Eastern England,0.0012536868
+marketing,0.0012361967
+trainee,0.0012358843
+ml engineer,0.0011674174
+production,0.0011665683
+applied,0.0011618015
+data architect,0.0011498848
+governance,0.0010603011
+performance,0.0010120359
+region_grouped_North East England,0.0009682497
+hr data,0.00096280174
+data business,0.00096167834
+ai engineer,0.0009301244
+contract_time_part_time,0.0009289205
+experience,0.0008617031
+employment,0.00086000044
+business partner,0.0008374328
+data reporting,0.0008224497
+lead data,0.0008006537
+cleared data,0.00075407006
+software developer,0.00071871915
+stack engineer,0.00071735604
+cluster_str_16,0.0006976657
+commercial,0.0006958739
+month ftc,0.0006754291
+cluster_str_4,0.00065933046
+junior,0.00064397394
+security,0.0006169364
+nurse,0.00059541233
+project,0.0005933844
+technology,0.0005790082
+reporting analyst,0.0005523528
+region_grouped_Scotland,0.00054137834
+quality,0.0004955147
+science,0.00047075294
+category_label_Graduate Jobs,0.00044737873
+intelligence developer,0.0004463698
+operations,0.00033559924
+analyst apprentice,0.0002467861
+cluster_str_11,0.00019658952
+"category_label_Energy, Oil & Gas Jobs",0.00017925154
+cluster_str_3,0.00014976547
+description_length,6.123142e-05
+category_label_HR & Recruitment Jobs,1.1123129e-05
+guarantee,4.5415177e-06
+databricks,0.0
 category_label_Legal Jobs,0.0
-category_label_Property Jobs,0.0
-powerbi developer,0.0
-category_label_Sales Jobs,0.0
-learning researcher,0.0
-data business,0.0
-data engineering,0.0
-junior data,0.0
-data governance,0.0
-data platform,0.0
-insurance,0.0
-insights analyst,0.0
-insights,0.0
-insight analyst,0.0
-ii,0.0
-digital data,0.0
-head data,0.0
-group,0.0
-governance analyst,0.0
-gds consulting,0.0
-gds,0.0
-emea,0.0
-engineer data,0.0
-fixed term,0.0
-fixed,0.0
-engineer python,0.0
-engineering manager,0.0
-finance analyst,0.0
-learning engineer,0.0
-credit,0.0
-quantitative,0.0
-machine,0.0
-quant,0.0
-project manager,0.0
-project,0.0
-products,0.0
-product data,0.0
-2026,0.0
-president,0.0
-ey,0.0
-power platform,0.0
-ai data,0.0
-pmo,0.0
-performance,0.0
-partner,0.0
-months,0.0
-month ftc,0.0
+12 month,0.0
+category_label_Teaching Jobs,0.0
+category_label_Maintenance Jobs,0.0
+category_label_Manufacturing Jobs,0.0
+analyst incident,0.0
+analyst sql,0.0
 asset data,0.0
-master data,0.0
-master,0.0
-marketing data,0.0
-market,0.0
+adviser,0.0
+data security,0.0
+data insight,0.0
+data manager,0.0
+business intelligence,0.0
+"category_label_PR, Advertising & Marketing Jobs",0.0
+category_label_Part time Jobs,0.0
+category_label_Retail Jobs,0.0
+finance analyst,0.0
+digital data,0.0
+fp manager,0.0
+digital,0.0
+defence,0.0
+graduate,0.0
+incident,0.0
+incident response,0.0
+months,0.0
+partner,0.0
 manager data,0.0
-associate,0.0
+intelligence analyst,0.0
+insights analyst,0.0
+learning engineer,0.0
+machine,0.0
 machine learning,0.0
-financial crime,0.0
+junior data,0.0
+job guarantee,0.0
+job,0.0
+fp analyst,0.0
+head data,0.0
+powerbi developer,0.0
+project manager,0.0
+power platform,0.0
+security analyst,0.0
+scientist ai,0.0
+science analyst,0.0
+response lead,0.0
+registered nurse,0.0
+required,0.0
+response,0.0
+registered,0.0
+product analyst,0.0
+software engineer,0.0
+solutions architect,0.0
+senior software,0.0
+solutions,0.0
+staff data,0.0
+team,0.0
+transport,0.0
